@@ -5,9 +5,7 @@
   <meta charset="utf-8" />
 
   <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
-  <link rel="stylesheet" href="{% static 'into/css/styles/main.css'%}">
-  <link rel="stylesheet" href="{% static 'intro/css/styles/main.min.css'%}">
-
+<link rel="stylesheet" href="{% static 'into/css/styles/main.css' %}">
 
   <meta
     content="width=device-width, initial-scale=1, shrink-to-fit=no"
@@ -23,8 +21,7 @@
     content="Portfolio website"
   />
 
-<img src="{% static 'intro/images/favicon.png'%}" alt="logo">
-
+<img src="{% static 'intro/images/logo.svg' %}" alt="logo" />
 
   <meta name="twitter:site" content="whoami-anoint" />
 
@@ -541,7 +538,9 @@ document.getElementById('sayHelloButton').addEventListener('click', function() {
 
     </div>
 
-    <script src="/assets/js/main.js"></script>
+
+<script src="{% static 'js/main.js' %}"></script>
+
 
     
   </body>
