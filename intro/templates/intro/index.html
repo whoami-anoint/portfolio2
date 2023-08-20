@@ -6,7 +6,7 @@
 
   <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
 <link rel="stylesheet" href="{% static '/css/styles/main.css' %}">
-<link rel="stylesheet" href="{% static '/css/styles/main.css' %}">
+<link rel="stylesheet" href="{% static '/css/styles/main.min.css' %}">
 
   <meta
     content="width=device-width, initial-scale=1, shrink-to-fit=no"
@@ -18,7 +18,7 @@
   <meta property="og:locale" content="en_US" />
 
   <meta
-    name="description"/intro/static/images/favicon.png
+    name="description"
     content="Portfolio website"
   />
 
@@ -238,7 +238,8 @@
   <div class="border-b border-grey-lighter py-16 lg:py-20">
     
     <div class="rounded-full h-16 w-16 overflow-hidden">
-      <img src="/assets/img/author.png" class="h-full w-full" alt="author" />
+      
+      <img src="{%static "images/author.png"%}" class="h-full w-full" alt="author" />
     </div>
     
     <h1
@@ -274,8 +275,8 @@ document.getElementById('sayHelloButton').addEventListener('click', function() {
   </div>
 
   <div class="border-b border-grey-lighter py-16 lg:py-20">
-    <div class="flex items-center pb-6">
-      <img src="/assets/img/icon-story.png" alt="icon story" />
+    <div class="flex items-center pb-6"> 
+      <img src="{%static "images/icon-story.png"%}" alt="icon story" />
       <h3
         class="ml-3 font-body text-2xl font-semibold text-primary dark:text-white">
        About Me
@@ -315,7 +316,7 @@ document.getElementById('sayHelloButton').addEventListener('click', function() {
 
   <div class="py-16 lg:py-20">
     <div class="flex items-center pb-6">
-      <img src="/assets/img/icon-blog.png" alt="icon story" />
+      <img src="{%static "images/icon-blog.png"%}" alt="icon story" />
       <h3
         class="ml-3 font-body text-2xl font-semibold text-primary dark:text-white"
       >
@@ -327,7 +328,7 @@ document.getElementById('sayHelloButton').addEventListener('click', function() {
       >
         All posts
         <img
-          src="/assets/img/long-arrow-right.png"
+          src="{%static "images/long-arrow-right.png"%}"
           class="ml-3"
           alt="arrow right"
         />
@@ -405,7 +406,8 @@ document.getElementById('sayHelloButton').addEventListener('click', function() {
 
   <div class="pb-16 lg:pb-20">
     <div class="flex items-center pb-6">
-      <img src="/assets/img/icon-project.png" alt="icon story" />
+
+      <img src="{%static "images/icon-project.png"%}" alt="icon story" />
       <h3
         class="ml-3 font-body text-2xl font-semibold text-primary dark:text-white"
       >
@@ -429,7 +431,7 @@ document.getElementById('sayHelloButton').addEventListener('click', function() {
           </p>
         </span>
         <span class="w-1/10">
-          <img src="/assets/img/chevron-right.png" class="mx-auto" alt="chevron right" />
+          <img src="{%static "/images/chevron-right.png"%}" class="mx-auto" alt="chevron right" />
         </span>
       </a>
       
@@ -448,7 +450,7 @@ document.getElementById('sayHelloButton').addEventListener('click', function() {
           </p>
         </span>
         <span class="w-1/10">
-          <img src="/assets/img/chevron-right.png" class="mx-auto" alt="chevron right" />
+          <img src="{%static "images/chevron-right.png"%}" class="mx-auto" alt="chevron right" />
         </span>
       </a>
       
@@ -467,7 +469,7 @@ document.getElementById('sayHelloButton').addEventListener('click', function() {
           </p>
         </span>
         <span class="w-1/10">
-          <img src="/assets/img/chevron-right.png" class="mx-auto" alt="chevron right" />
+          <img src="{%static "images/chevron-right.png"%}" class="mx-auto" alt="chevron right" />
         </span>
       </a>
       
@@ -486,7 +488,7 @@ document.getElementById('sayHelloButton').addEventListener('click', function() {
           </p>
         </span>
         <span class="w-1/10">
-          <img src="/assets/img/chevron-right.png" class="mx-auto" alt="chevron right" />
+          <img src="{%static "images/chevron-right.png"%}" class="mx-auto" alt="chevron right" />
         </span>
       </a>
       
@@ -501,7 +503,7 @@ document.getElementById('sayHelloButton').addEventListener('click', function() {
   >
     <div class="mr-auto flex flex-col items-center sm:flex-row">
       <a href="/" class="mr-auto sm:mr-6">
-        <img src="/assets/img/logo.svg" alt="logo" />
+        <img src="{%static "images/logo.svg"%}" alt="logo" />
       </a>
       <p class="pt-5 font-body font-light text-primary dark:text-white sm:pt-0">
         ©2023 Abishek Kafle
