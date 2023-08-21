@@ -25,7 +25,7 @@ SECRET_KEY = '7(u73y3l$5e4#2sv93x_5g!1h%!^88u(a1i&q=_t2+o-fj)byy'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['portfolio-testing.onrender.com']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
