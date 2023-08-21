@@ -5,26 +5,42 @@
   <meta charset="utf-8" />
 
   <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
-<link rel="stylesheet" href="{% static 'css/styles/main.css' %}">
-<link rel="stylesheet" href="{% static 'css/styles/main.min.css' %}">
 
   <meta
     content="width=device-width, initial-scale=1, shrink-to-fit=no"
     name="viewport"
   />
 
-  <title>Anoint</title>
+  <title>Blogs | Anoint</title>
+
+  <meta property="og:title" content="Blog | Anoint" />
 
   <meta property="og:locale" content="en_US" />
 
-  <meta
-    name="description"
-    content="Portfolio website"
+  <link
+    rel="canonical"
+    href="https://atlas.tailwindmade.com/blog"
   />
 
-<img src="{% static "images/logo.svg" %}" alt="logo" />
+  <meta
+    property="og:url"
+    content="https://atlas.tailwindmade.com/blog"
+  />
 
-  <meta name="twitter:site" content="whoami-anoint" />
+  <meta
+    name="description"
+    content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+  />
+
+  <link rel="icon" type="image/png" href="{%static "images/favicon.png"%}" />
+
+  <meta property="og:site_name" content="Abishek Kafle" />
+
+  <meta property="og:image" content="https://atlas.tailwindmade.com/assets/img/social.jpg" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <meta name="twitter:site" content="@tailwindmade" />
 
   <link
     crossorigin="crossorigin"
@@ -50,7 +66,7 @@
 
   <link
     crossorigin="anonymous"
-    href="{% static 'css/styles/main.css' %}"
+    href="{%static "css/styles/main.min.css"%}"
     media="screen"
     rel="stylesheet"
   />
@@ -83,7 +99,7 @@
   <div class="flex items-center justify-between py-6 lg:py-10">
     <a href="/" class="flex items-center">
       <span href="/" class="mr-2">
-        <img src="{% static "images/logo.svg" %}" alt="logo" />
+        <img src="{%static "images/logo.svg"%}" alt="logo" />
       </span>
       <p class="hidden font-body text-2xl font-bold text-primary dark:text-white lg:block">
         Abishek Kafle
@@ -128,10 +144,7 @@
           <div
             class="absolute left-0 bottom-0 z-20 h-0 w-full opacity-75 transition-all group-hover:h-2 group-hover:bg-yellow"
           ></div>
-          <a
-            href="/blogs/blog1"
-            class="relative z-30 block px-2 font-body text-lg font-medium text-primary transition-colors group-hover:text-green dark:text-white dark:group-hover:text-secondary"
-            >Blogs</a
+          <a class='relative z-30 block px-2 font-body text-lg font-medium text-primary transition-colors group-hover:text-green dark:text-white dark:group-hover:text-secondary' href='/blogs/blog1'>Blogs</a
           >
         </li>
         
@@ -139,32 +152,23 @@
           <div
             class="absolute left-0 bottom-0 z-20 h-0 w-full opacity-75 transition-all group-hover:h-2 group-hover:bg-yellow"
           ></div>
-          <a
-            href="/poems.html"
-            class="relative z-30 block px-2 font-body text-lg font-medium text-primary transition-colors group-hover:text-green dark:text-white dark:group-hover:text-secondary"
-            >Poems</a
-          >
+          <a class='relative z-30 block px-2 font-body text-lg font-medium text-primary transition-colors group-hover:text-green dark:text-white dark:group-hover:text-secondary' href='/poems'>
+            Poems</a>
         </li>
 
         <li class="group relative mr-6 mb-1">
           <div
             class="absolute left-0 bottom-0 z-20 h-0 w-full opacity-75 transition-all group-hover:h-2 group-hover:bg-yellow"
           ></div>
-          <a
-            href="/projects.html"
-            class="relative z-30 block px-2 font-body text-lg font-medium text-primary transition-colors group-hover:text-green dark:text-white dark:group-hover:text-secondary"
-            >Projects</a
-          >
+          <a class='relative z-30 block px-2 font-body text-lg font-medium text-primary transition-colors group-hover:text-green dark:text-white dark:group-hover:text-secondary' href='/projects'>
+            Projects</a>
         </li>
         
         <li class="group relative mr-6 mb-1">
           <div
             class="absolute left-0 bottom-0 z-20 h-0 w-full opacity-75 transition-all group-hover:h-2 group-hover:bg-yellow"
           ></div>
-          <a
-            href="/contact.html"
-            class="relative z-30 block px-2 font-body text-lg font-medium text-primary transition-colors group-hover:text-green dark:text-white dark:group-hover:text-secondary"
-            >Contact</a
+          <a class='relative z-30 block px-2 font-body text-lg font-medium text-primary transition-colors group-hover:text-green dark:text-white dark:group-hover:text-secondary' href='/contact'>Contact</a
           >
         </li>
         
@@ -200,39 +204,28 @@
       </li>
       
       <li class="">
-        <a
-          href="/blogs/blog1"
-          class="mb-3 block px-2 font-body text-lg font-medium text-white"
-          >Blogs</a
+        <a class='mb-3 block px-2 font-body text-lg font-medium text-white' href='/blogs/blog1'>Blogs</a
         >
       </li>
       
       <li class="">
-        <a
-          href="/poems.html"
-          class="mb-3 block px-2 font-body text-lg font-medium text-white">
-          Poems</a>
+        <a class='mb-3 block px-2 font-body text-lg font-medium text-white' href='/poems'>Poems</a
+        >
       </li>
 
       <li class="">
-        <a
-          href="/projects.html"
-          class="mb-3 block px-2 font-body text-lg font-medium text-white">
-          Projects</a>
+        <a class='mb-3 block px-2 font-body text-lg font-medium text-white' href='/projects'>Projects</a
+        >
       </li>
       
       <li class="">
-        <a
-          href="/contact"
-          class="mb-3 block px-2 font-body text-lg font-medium text-white"
-          >Contact</a
+        <a class='mb-3 block px-2 font-body text-lg font-medium text-white' href='/contact'>Contact</a
         >
       </li>
       
     </ul>
   </div>
 </div>
-
 
       <div><div class="container mx-auto">
   <div class="border-b border-grey-lighter py-16 lg:py-20">
