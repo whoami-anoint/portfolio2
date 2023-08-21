@@ -8,7 +8,7 @@ sudo systemctl stop gunicorn
 git pull origin master
 
 # Activate virtual environment
-source venv/bin/activate     
+source venv/bin/activate
 
 # Install or update dependencies
 pip install -r requirements.txt
@@ -25,5 +25,9 @@ sudo systemctl start nginx
 
 # Reload Nginx configuration
 sudo systemctl reload nginx
+
+# Install and initialize Tailwind CSS
+npm install -D tailwindcss
+npx tailwindcss init
 
 echo "Deployment complete!"
