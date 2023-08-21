@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{%load static%}
 <html lang="en">
   <head>
   <meta charset="utf-8" />
@@ -12,16 +13,18 @@
 
   <title>Poems | Anoint</title>
 
+  <meta property="og:title" content="Blog | Anoint" />
+
   <meta property="og:locale" content="en_US" />
 
   <link
     rel="canonical"
-    href="https://atlas.tailwindmade.com/uses"
+    href="https://atlas.tailwindmade.com/blog"
   />
 
   <meta
     property="og:url"
-    content="https://atlas.tailwindmade.com/uses"
+    content="https://atlas.tailwindmade.com/blog"
   />
 
   <meta
@@ -29,9 +32,9 @@
     content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
   />
 
-  <link rel="icon" type="image/png" href="/assets/img/favicon.png" />
+  <link rel="icon" type="image/png" href="{%static "images/favicon.png"%}" />
 
-  <meta property="og:site_name" content="Atlas Template" />
+  <meta property="og:site_name" content="Abishek Kafle" />
 
   <meta property="og:image" content="https://atlas.tailwindmade.com/assets/img/social.jpg" />
 
@@ -63,7 +66,7 @@
 
   <link
     crossorigin="anonymous"
-    href="/assets/styles/main.min.css"
+    href="{%static "css/styles/main.min.css"%}"
     media="screen"
     rel="stylesheet"
   />
@@ -96,10 +99,9 @@
   <div class="flex items-center justify-between py-6 lg:py-10">
     <a href="/" class="flex items-center">
       <span href="/" class="mr-2">
-        <img src="/assets/img/logo.svg" alt="logo" />
+        <img src="{%static "images/logo.svg"%}" alt="logo" />
       </span>
-      <p
-        class="hidden font-body text-2xl font-bold text-primary dark:text-white lg:block">
+      <p class="hidden font-body text-2xl font-bold text-primary dark:text-white lg:block">
         Abishek Kafle
       </p>
     </a>
@@ -142,10 +144,7 @@
           <div
             class="absolute left-0 bottom-0 z-20 h-0 w-full opacity-75 transition-all group-hover:h-2 group-hover:bg-yellow"
           ></div>
-          <a
-            href="/blogs.html"
-            class="relative z-30 block px-2 font-body text-lg font-medium text-primary transition-colors group-hover:text-green dark:text-white dark:group-hover:text-secondary"
-            >Blogs</a
+          <a class='relative z-30 block px-2 font-body text-lg font-medium text-primary transition-colors group-hover:text-green dark:text-white dark:group-hover:text-secondary' href='/blogs/blog1'>Blogs</a
           >
         </li>
         
@@ -153,32 +152,23 @@
           <div
             class="absolute left-0 bottom-0 z-20 h-0 w-full opacity-75 transition-all group-hover:h-2 group-hover:bg-yellow"
           ></div>
-          <a
-            href="/poems.html"
-            class="relative z-30 block px-2 font-body text-lg font-medium text-primary transition-colors group-hover:text-green dark:text-white dark:group-hover:text-secondary"
-            >Poems</a
-          >
+          <a class='relative z-30 block px-2 font-body text-lg font-medium text-primary transition-colors group-hover:text-green dark:text-white dark:group-hover:text-secondary' href='/poems/poems1'>
+            Poems</a>
         </li>
 
         <li class="group relative mr-6 mb-1">
           <div
             class="absolute left-0 bottom-0 z-20 h-0 w-full opacity-75 transition-all group-hover:h-2 group-hover:bg-yellow"
           ></div>
-          <a
-            href="/projects.html"
-            class="relative z-30 block px-2 font-body text-lg font-medium text-primary transition-colors group-hover:text-green dark:text-white dark:group-hover:text-secondary"
-            >Projects</a
-          >
+          <a class='relative z-30 block px-2 font-body text-lg font-medium text-primary transition-colors group-hover:text-green dark:text-white dark:group-hover:text-secondary' href='/projects'>
+            Projects</a>
         </li>
         
         <li class="group relative mr-6 mb-1">
           <div
             class="absolute left-0 bottom-0 z-20 h-0 w-full opacity-75 transition-all group-hover:h-2 group-hover:bg-yellow"
           ></div>
-          <a
-            href="/contact.html"
-            class="relative z-30 block px-2 font-body text-lg font-medium text-primary transition-colors group-hover:text-green dark:text-white dark:group-hover:text-secondary"
-            >Contact</a
+          <a class='relative z-30 block px-2 font-body text-lg font-medium text-primary transition-colors group-hover:text-green dark:text-white dark:group-hover:text-secondary' href='/contact'>Contact</a
           >
         </li>
         
@@ -214,34 +204,22 @@
       </li>
       
       <li class="">
-        <a
-          href="/blogs.html"
-          class="mb-3 block px-2 font-body text-lg font-medium text-white"
-          >Blogs</a
+        <a class='mb-3 block px-2 font-body text-lg font-medium text-white' href='/blogs/blog1'>Blogs</a
         >
       </li>
       
       <li class="">
-        <a
-          href="/poems.html"
-          class="mb-3 block px-2 font-body text-lg font-medium text-white"
-          >Poems</a
+        <a class='mb-3 block px-2 font-body text-lg font-medium text-white' href='/poems/poems1'>Poems</a
         >
       </li>
 
       <li class="">
-        <a
-          href="/projects.html"
-          class="mb-3 block px-2 font-body text-lg font-medium text-white"
-          >Projects</a
+        <a class='mb-3 block px-2 font-body text-lg font-medium text-white' href='/projects'>Projects</a
         >
       </li>
       
       <li class="">
-        <a
-          href="/contact.html"
-          class="mb-3 block px-2 font-body text-lg font-medium text-white"
-          >Contact</a
+        <a class='mb-3 block px-2 font-body text-lg font-medium text-white' href='/contact'>Contact</a
         >
       </li>
       
@@ -251,66 +229,194 @@
 
 
       <div><div class="container mx-auto">
-  <div class="py-16 lg:py-20">
-    <div>
-      <img src="/assets/img/icon-uses.png" alt="icon uses" />
+  <div class="py-12 lg:py-20">
+    <div class="rounded-full w-12 h-12 overflow-hidden">
+      <img src="{%static "images/poetry.png"%}" alt="icon poetry" />
     </div>
+
     <h1
       class="pt-5 font-body text-4xl font-semibold text-primary dark:text-white md:text-5xl lg:text-6xl"
     >
-      /poems
+      Infosec Poems
     </h1>
-    <div class="pr-2 pt-3">
-      <span class="font-body text-xl font-light text-primary dark:text-white">
-        Author: Abishek Kafle
+
+    <div class="pt-3 sm:w-3/4">
+      <p class="font-body text-xl font-light text-primary dark:text-white">
+      Poems related to Information Security (InfoSec),i.e Programming, Tools and Techniques
+      </p>
     </div>
 
-    <div class="pt-16 lg:pt-20">
-      <h3
-        class="pb-8 font-body text-2xl font-semibold text-primary dark:text-white"
+    <form class="flex flex-col py-12 sm:flex-row">
+      <input
+        type="email"
+        id="subscribe"
+        placeholder="Drop that email here…"
+        class="w-full border border-primary bg-grey-lightest px-5 py-4 font-body font-light text-primary placeholder-primary transition-colors focus:border-secondary focus:outline-none focus:ring-2 focus:ring-secondary dark:border-secondary sm:w-1/2"
+      />
+      <button
+        type="submit"
+        class="mt-5 bg-secondary px-10 py-4 font-body text-xl font-semibold text-white hover:bg-green sm:mt-0 md:text-2xl"
       >
-        Computer + Workspace
-      </h3>
-      <ul class="list-disc pl-10">
-        <li class="font-body text-lg font-light text-primary dark:text-white">
-          <span class="font-medium">Computer:</span>
-          I use a 2019 16"
-          <a
-            href="/"
-            class="font-medium text-green underline hover:text-secondary dark:text-green-light dark:hover:text-secondary"
-            >MacBook Pro</a
-          >
-          (i9/32GB/512gb) for everything (work + personal). The physical escape
-          key and fixed keyboard is amazing.
-        </li>
-        <li
-          class="pt-5 font-body text-lg font-light text-primary dark:text-white"
+        Subscribe
+      </button>
+    </form>
+
+    <div class="pt-8 lg:pt-12">
+      <div class="border-b border-grey-lighter pb-8">
+        <span
+          class="mb-4 inline-block rounded-full bg-green-light px-2 py-1 font-body text-sm text-green"
+          >SQL Injection</span
         >
-          <span class="font-medium">Chair:</span>
-          When I sit, I sit on an
-          <a
-            href="/"
-            class="font-medium text-green underline hover:text-secondary dark:text-green-light dark:hover:text-secondary"
-            >Herman Miller Mirra 2</a
-          >, but I stand almost 100% of the time, so the chair doesn’t do me
-          much good.
-        </li>
-        <li
-          class="pt-5 font-body text-lg font-light text-primary dark:text-white"
+        <a
+          href="https://anoint.medium.com/exploring-the-varying-sql-injection-endpoints-in-different-websites-bbd95cd24185"
+          class="block font-body text-lg font-semibold text-primary transition-colors hover:text-green dark:text-white dark:hover:text-secondary"
+          >Exploring SQL Injection Endpoints in Different Websites</a
         >
-          <span class="font-medium">Desk:</span>
-          My desk is a
-          <a
-            href="/"
-            class="font-medium text-green underline hover:text-secondary dark:text-green-light dark:hover:text-secondary"
-            >Fully Jarvis standing desk</a
+        <div class="flex items-center pt-4">
+          <p class="pr-2 font-body font-light text-primary dark:text-white">
+            Jun 24, 2023
+          </p>
+          <span class="font-body text-grey dark:text-white">//</span>
+          <p class="pl-2 font-body font-light text-primary dark:text-white">
+            4 min read
+          </p>
+        </div>
+      </div>
+      <div class="border-b border-grey-lighter pt-10 pb-8">
+        <div class="flex items-center">
+          <span
+            class="mb-4 inline-block rounded-full bg-grey-light px-2 py-1 font-body text-sm text-blue-dark"
+            >PyPI</span
           >
-          (which I love) with the Bamboo top (which I don't recommend). If
-          you're looking for a great sit-stand desk, I highly recommend Jarvis.
-          Also, purchase directly from Fully vs. Amazon. Fully's customer
-          support is incredible.
-        </li>
-      </ul>
+          <span
+            class="mb-4 ml-4 inline-block rounded-full bg-yellow-light px-2 py-1 font-body text-sm text-yellow-dark"
+            >Python Package</span
+          >
+        </div>
+        <a
+          href="https://anoint.medium.com/exploring-the-varying-sql-injection-endpoints-in-different-websites-bbd95cd24185"
+          class="block font-body text-lg font-semibold text-primary transition-colors hover:text-green dark:text-white dark:hover:text-secondary"
+          >A Step-by-Step Guide to Uploading Your Python Package to PyPI
+          </a
+        >
+        <div class="flex items-center pt-4">
+          <p class="pr-2 font-body font-light text-primary dark:text-white">
+            Aug 14, 2023
+          </p>
+          <span class="font-body text-grey dark:text-white">//</span>
+          <p class="pl-2 font-body font-light text-primary dark:text-white">
+            3 min read
+          </p>
+        </div>
+      </div>
+      <div class="border-b border-grey-lighter pt-10 pb-8">
+        <span
+          class="mb-4 inline-block rounded-full bg-blue-light px-2 py-1 font-body text-sm text-blue"
+          >Extended Reality</span
+        >
+        <a
+          href="https://anoint.medium.com/extended-reality-xr-b27c2a50dcc"
+          class="block font-body text-lg font-semibold text-primary transition-colors hover:text-green dark:text-white dark:hover:text-secondary"
+          >Extended Reality (XR)</a
+        >
+        <div class="flex items-center pt-4">
+          <p class="pr-2 font-body font-light text-primary dark:text-white">
+            April 03, 2023
+          </p>
+          <span class="font-body text-grey dark:text-white">//</span>
+          <p class="pl-2 font-body font-light text-primary dark:text-white">
+            3 min read
+          </p>
+        </div>
+      </div>
+      <div class="border-b border-grey-lighter pt-10 pb-8">
+        <span
+          class="mb-4 inline-block rounded-full bg-green-light px-2 py-1 font-body text-sm text-green"
+          >Firewall</span
+        >
+        <a
+          href="https://anoint.medium.com/next-generation-firewall-72acf3a2c1a6"
+          class="block font-body text-lg font-semibold text-primary transition-colors hover:text-green dark:text-white dark:hover:text-secondary"
+          >Next Generation Firewall</a
+        >
+        <div class="flex items-center pt-4">
+          <p class="pr-2 font-body font-light text-primary dark:text-white">
+            Mar 21, 2020
+          </p>
+          <span class="font-body text-grey dark:text-white">//</span>
+          <p class="pl-2 font-body font-light text-primary dark:text-white">
+            5 min read
+          </p>
+        </div>
+      </div>
+      <div class="border-b border-grey-lighter pt-10 pb-8">
+        <div class="flex items-center">
+          <span
+            class="mb-4 inline-block rounded-full bg-grey-light px-2 py-1 font-body text-sm text-blue-dark"
+            >XSS</span
+          >
+          <span
+            class="mb-4 ml-4 inline-block rounded-full bg-yellow-light px-2 py-1 font-body text-sm text-yellow-dark"
+            >Cross Site Scripting</span
+          >
+        </div>
+        <a
+          href="https://anoint.medium.com/pinpointing-xss-vulnerabilities-c06d3b6ba7ba"
+          class="block font-body text-lg font-semibold text-primary transition-colors hover:text-green dark:text-white dark:hover:text-secondary"
+          >Pinpointing XSS Vulnerabilities</a
+        >
+        <div class="flex items-center pt-4">
+          <p class="pr-2 font-body font-light text-primary dark:text-white">
+            Mar 1, 2023
+          </p>
+          <span class="font-body text-grey dark:text-white">//</span>
+          <p class="pl-2 font-body font-light text-primary dark:text-white">
+            5 min read
+          </p>
+        </div>
+      </div>
+      <div class="border-b border-grey-lighter pt-10 pb-8">
+        <span
+          class="mb-4 inline-block rounded-full bg-blue-light px-2 py-1 font-body text-sm text-blue"
+          >Big(O)</span
+        >
+        <a
+          href="https://anoint.medium.com/introduction-to-ss7-57da9ead5cbd"
+          class="block font-body text-lg font-semibold text-primary transition-colors hover:text-green dark:text-white dark:hover:text-secondary"
+          >Introduction to SS7</a
+        >
+        <div class="flex items-center pt-4">
+          <p class="pr-2 font-body font-light text-primary dark:text-white">
+            Mar 15, 2023
+          </p>
+          <span class="font-body text-grey dark:text-white">//</span>
+          <p class="pl-2 font-body font-light text-primary dark:text-white">
+            2 min read
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex pt-8 lg:pt-16">
+      <span
+        class="cursor-pointer border-2 border-secondary px-3 py-1 font-body font-medium text-secondary"
+        ><a href = "/blogs/blog1">1</a></span
+      >
+      <span
+        class="ml-3 cursor-pointer border-2 border-primary px-3 py-1 font-body font-medium text-primary transition-colors hover:border-secondary hover:text-secondary dark:border-green-light dark:text-white dark:hover:border-secondary dark:hover:text-secondary"
+        ><a href = "/blogs/blog2">2</a></span
+      >
+      <span
+        class="ml-3 cursor-pointer border-2 border-primary px-3 py-1 font-body font-medium text-primary transition-colors hover:border-secondary hover:text-secondary dark:border-green-light dark:text-white dark:hover:border-secondary dark:hover:text-secondary"
+        ><a href = "/blogs/blog3">3</a></span
+      >
+      <span
+        class="group ml-3 flex cursor-pointer items-center border-2 border-primary px-3 py-1 font-body font-medium text-primary transition-colors hover:border-secondary hover:text-secondary dark:border-green-light dark:text-white dark:hover:border-secondary dark:hover:text-secondary"
+        >Next
+        <i
+          class="bx bx-right-arrow-alt ml-1 text-primary transition-colors group-hover:text-secondary dark:text-white"
+        ></i
+      ></span>
     </div>
   </div>
 </div>
@@ -322,7 +428,7 @@
   >
     <div class="mr-auto flex flex-col items-center sm:flex-row">
       <a href="/" class="mr-auto sm:mr-6">
-        <img src="/assets/img/logo.svg" alt="logo" />
+        <img src="{%static "images/logo.svg"%}" alt="logo" />
       </a>
       <p class="pt-5 font-body font-light text-primary dark:text-white sm:pt-0">
         ©2023 Abishek Kafle
@@ -330,12 +436,11 @@
     </div>
     <div class="mr-auto flex items-center pt-5 sm:mr-0 sm:pt-0">
       
-      <a href="https://github.com/whoami-anoint " target="_blank">
+      <a href="https://github.com/whoami-anoint/">
         <i
           class="text-4xl text-primary dark:text-white pl-5 hover:text-secondary dark:hover:text-secondary transition-colors bx bxl-github"
         ></i>
       </a>
-      
       <a href="https://anoint.medium.com/">
         <i
           class="text-4xl text-primary dark:text-white pl-5 hover:text-secondary dark:hover:text-secondary transition-colors bx bxl-medium"
@@ -348,7 +453,7 @@
         ></i>
       </a>
       
-      <a href="https://www.linkedin.com/in/whoami-anoint/ " target="_blank">
+      <a href="https://www.linkedin.com/in/whoami-anoint/">
         <i
           class="text-4xl text-primary dark:text-white pl-5 hover:text-secondary dark:hover:text-secondary transition-colors bx bxl-linkedin"
         ></i>
@@ -360,8 +465,14 @@
 
     </div>
 
-    <script src="/assets/js/main.js"></script>
+    <script src="{%static "/js/main.js"%}"></script>
 
-    
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+  const page2Link = document.getElementById("page-2");
+  page2Link.addEventListener("click", function () {
+  window.location.href = "blog2.html";
+  });
+</script>
   </body>
 </html>
