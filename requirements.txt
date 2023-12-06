@@ -1,5 +1,6 @@
 asgiref==3.7.2
-Django
-gunicorn
+Django==4.2.4
+gunicorn==21.2.0
+packaging==23.1
 sqlparse==0.4.4
 tailwindcss==0.0.1
