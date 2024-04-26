@@ -17,4 +17,8 @@ jobs:
         run: docker build -t portfolio:latest .
 
       - name: Run Docker Container
-        run: docker run portfolio:latest
+        run: |
+          docker run -d --name portfolio_container -p 8000:8000 portfolio:latest
+          docker_ip=$(docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' portfolio_container)
+          echo "Docker container IP address: $docker_ip"
+          echo "Docker container is accessible at http://$docker_ip:8000"
