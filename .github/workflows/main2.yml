@@ -26,17 +26,17 @@ jobs:
 
     - name: Download and extract Hadoop
       run: |
-        wget https://downloads.apache.org/hadoop/common/hadoop-3.3.1/hadoop-3.3.1.tar.gz
-        tar -xzf hadoop-3.3.1.tar.gz
+        wget https://downloads.apache.org/hadoop/common/hadoop-3.4.0/hadoop-3.4.0-aarch64.tar.gz
+        tar -xzf hadoop-3.4.0-aarch64.tar.gz
 
     - name: Configure Hadoop
       run: |
-        cd hadoop-3.3.1/etc/hadoop
+        cd hadoop-3.4.0/etc/hadoop
         # Modify configuration files as needed
 
     - name: Start Hadoop
       run: |
-        cd hadoop-3.3.1/sbin
+        cd hadoop-3.4.0/sbin
         ./start-all.sh
 
     - name: Install Ngrok
