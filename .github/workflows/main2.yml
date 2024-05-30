@@ -1,0 +1,39 @@
+name: Hadoop with Ngrok on GitHub Actions
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Java
+      uses: actions/setup-java@v2
+      with:
+        java-version: '11'
+
+    - name: Download and extract Hadoop
+      run: |
+        wget https://downloads.apache.org/hadoop/common/hadoop-3.3.1/hadoop-3.3.1.tar.gz
+        tar -xzf hadoop-3.3.1.tar.gz
+
+    - name: Configure Hadoop
+      run: |
+        cd hadoop-3.3.1/etc/hadoop
+        # Modify configuration files as needed
+
+    - name: Start Hadoop
+      run: |
+        cd hadoop-3.3.1/sbin
+        ./start-all.sh
+
+    - name: Install Ngrok
+      run: |
+        curl -s https://ngrok.com/download | sudo tar -xz -C /usr/local/bin ngrok
+
+    - name: Expose Hadoop default port using Ngrok
+      run: |
+        ngrok http 8080
