@@ -1,48 +1,43 @@
-name: Hadoop with Ngrok on GitHub Actions
+name: Deploy Django App with Tunnelmole
 
-on: [push]
+on:
+  push:
+    branches:
+      - main  # Trigger this workflow on pushes to the main branch
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-    - name: Set up Java
-      uses: actions/setup-java@v2
-      with:
-        java-version: '11'
-        distribution: 'adopt'
-        java-package: 'jdk'
-        architecture: 'x64'
-        check-latest: false
-        server-id: 'github'
-        server-username: ${{ github.actor }}
-        server-password: ${{ secrets.GITHUB_TOKEN }}
-        overwrite-settings: true
-        job-status: 'success'
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'  # Use the Python version of your choice
 
-    - name: Download and extract Hadoop
-      run: |
-        wget https://downloads.apache.org/hadoop/common/hadoop-3.4.0/hadoop-3.4.0-aarch64.tar.gz
-        tar -xzf hadoop-3.4.0-aarch64.tar.gz
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
 
-    - name: Configure Hadoop
-      run: |
-        cd hadoop-3.4.0/etc/hadoop
-        # Modify configuration files as needed
+      - name: Start Django server
+        run: |
+          python manage.py runserver 0.0.0.0:8000 &
+          sleep 10  # Wait for the server to start
 
-    - name: Start Hadoop
-      run: |
-        cd hadoop-3.4.0/sbin
-        ./start-all.sh
+      - name: Install Tunnelmole
+        run: |
+          curl -sSL https://tunnelmole.com/downloads/tunnelmole-linux-amd64.tar.gz | tar xz
+          sudo mv tunnelmole /usr/local/bin/
+          tunnelmole --version  # Verify installation
 
-    - name: Install Ngrok
-      run: |
-        curl -s https://ngrok.com/download | sudo tar -xz -C /usr/local/bin ngrok
+      - name: Start Tunnelmole
+        run: |
+          tunnelmole -port 8000 &
+          sleep 10  # Wait for Tunnelmole to establish the tunnel
 
-    - name: Expose Hadoop default port using Ngrok
-      run: |
-        ngrok http 8080
+      - name: Run tests
+        run: |
+          python manage.py test
