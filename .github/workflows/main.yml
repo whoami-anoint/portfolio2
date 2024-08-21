@@ -1,24 +1,43 @@
-name: Docker Build and Run
+name: Deploy Django App with Tunnelmole
 
 on:
   push:
     branches:
-      - master
+      - main  # Trigger this workflow on pushes to the main branch
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-      - name: Build Docker Image
-        run: docker build -t portfolio:latest .
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'  # Use the Python version of your choice
 
-      - name: Run Docker Container
+      - name: Install dependencies
         run: |
-          docker run -d --name portfolio_container -p 8000:8000 portfolio:latest
-          docker_ip=$(docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' portfolio_container)
-          echo "Docker container IP address: $docker_ip"
-          echo "Docker container is accessible at http://$docker_ip:8000"
+          pip install -r requirements.txt
+
+      - name: Start Django server
+        run: |
+          python manage.py runserver 0.0.0.0:8000 &
+          sleep 10  # Wait for the server to start
+
+      - name: Install Tunnelmole
+        run: |
+          curl -sSL https://tunnelmole.com/downloads/tunnelmole-linux-amd64.tar.gz | tar xz
+          sudo mv tunnelmole /usr/local/bin/
+          tunnelmole --version  # Verify installation
+
+      - name: Start Tunnelmole
+        run: |
+          tunnelmole -port 8000 &
+          sleep 10  # Wait for Tunnelmole to establish the tunnel
+
+      - name: Run tests
+        run: |
+          python manage.py test
